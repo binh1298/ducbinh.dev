@@ -1,4 +1,9 @@
+import "./globals.css";
 import type { Metadata } from "next";
+import LocaleSwitcher from "./components/locale-switcher";
+import { PropsWithLocale } from "@/types/utils";
+import { PropsWithChildren } from "react";
+import ThemeProvider from "./components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Dante's App",
@@ -8,13 +13,17 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
   params,
-}: {
-  children: React.ReactNode;
-  params: { lang: string };
-}) {
+}: PropsWithLocale<PropsWithChildren<{}>>) {
   return (
-    <html lang={params.lang}>
-      <body>{children}</body>
+    <html lang={params.lang} className="bg-slate-950 text-white">
+      <body>
+        <ThemeProvider>
+          <>
+            <LocaleSwitcher />
+            {children}
+          </>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

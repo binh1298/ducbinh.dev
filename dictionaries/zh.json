@@ -1,4 +1,9 @@
 {
-  "app-title": "范德平的网页",
-  "app-description": "范某不才"
+  "app": {
+    "title": "范德平的网页",
+    "description": "范某不才"
+  },
+  "lnktr": {
+    "name": "范德平"
+  }
 }

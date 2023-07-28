@@ -1,4 +1,9 @@
 {
-  "app-title": "Đức Bình viết web nè ghê hok",
-  "app-description": "Viết web để được lên trình. Viết blog để được dân tình bấm like"
+  "app": {
+    "title": "Đức Bình viết web nè ghê hok",
+    "description": "Viết web để được lên trình. Viết blog để được dân tình bấm like"
+  },
+  "lnktr": {
+    "name": "Phạm Đức Bình"
+  }
 }

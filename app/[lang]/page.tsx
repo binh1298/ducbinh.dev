@@ -1,19 +1,17 @@
 import { getDictionary } from "@/get-dictionary";
-import { Locale } from "@/i18n-config";
-import LocaleSwitcher from "./components/locale-switcher";
+import { PropsWithLocale } from "@/types/utils";
 
 export default async function IndexPage({
   params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
+}: PropsWithLocale<{}>) {
   const dictionary = await getDictionary(lang);
 
   return (
     <div>
-      <LocaleSwitcher />
       <p>Current locale: {lang}</p>
-      <p>This text is rendered on the server: {dictionary["app-title"]}</p>
+      <p>
+        This text is rendered on the server: {dictionary["app"].description}
+      </p>
     </div>
   );
 }

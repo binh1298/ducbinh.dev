@@ -1,4 +1,10 @@
 {
-  "app-title": "Dante's website",
-  "app-description": "What I've got to show the world"
+  "app": {
+    "name": "Dante's website",
+    "description": "What I've got to show the world"
+  },
+  "lnktr": {
+    "name": "Dante Pham",
+    "job": "Software Engineer"
+  }
 }

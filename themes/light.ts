@@ -1,4 +1,4 @@
-const pastel = {
+const light = {
   "color-scheme": "light",
   primary: "#d1c1d7",
   secondary: "#f6cbd1",
@@ -10,4 +10,4 @@ const pastel = {
   "--rounded-btn": "1.9rem",
 } as const;
 
-export default pastel;
+export default light;

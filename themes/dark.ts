@@ -1,4 +1,4 @@
-const night = {
+const dark = {
   "color-scheme": "dark",
   primary: "#38bdf8",
   secondary: "#818CF8",
@@ -12,4 +12,4 @@ const night = {
   warning: "#F4BF50",
   error: "#FB7085",
 } as const;
-export default night;
+export default dark;

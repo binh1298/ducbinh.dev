@@ -34,7 +34,6 @@ export function middleware(request: NextRequest) {
       "/cloud.svg",
       "/moon.svg",
       "/star.svg",
-      "/buy-tab.svg",
       // other files in `public`
     ].includes(pathname)
   )

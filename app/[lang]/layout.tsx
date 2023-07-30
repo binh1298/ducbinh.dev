@@ -34,7 +34,12 @@ export default function RootLayout({
   params,
 }: PropsWithLocale<PropsWithChildren<{}>>) {
   return (
-    <html lang={params.lang} className={fontLanguages[params.lang].className}>
+    <html
+      lang={params.lang}
+      className={`transition-all duration-1000 ${
+        fontLanguages[params.lang].className
+      }`}
+    >
       <body className="bg-background text-text transition-all duration-1000">
         <ThemeProvider topItems={<LocaleSwitcher />}>{children}</ThemeProvider>
       </body>

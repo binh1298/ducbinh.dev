@@ -16,14 +16,14 @@ export default function ThemeProvider({
         <div className="flex justify-between [&>*]:transition-all [&>*]:duration-1000">
           <div
             className={
-              "h-10 w-20 rounded-full bg-blue-400 p-1  dark:bg-sky-950 [&>*]:transition-all [&>*]:duration-1000"
+              "h-9 w-20 rounded-full bg-blue-400 px-1 py-0.5  dark:bg-sky-950 [&>*]:transition-all [&>*]:duration-1000"
             }
             role="button"
             onClick={() => switchTheme()}
           >
             <div
               className={
-                "w-18 relative ml-0 h-9 rounded-full dark:pl-9 [&>*]:transition-all [&>*]:duration-700"
+                "w-18 relative ml-0 h-9 rounded-full dark:pl-9 [&>*]:transition-all [&>*]:duration-1000"
               }
             >
               <Image
@@ -38,7 +38,7 @@ export default function ThemeProvider({
                 alt="Cloud"
                 width={10}
                 height={10}
-                className="absolute left-8 motion-safe:animate-bounce dark:left-1 dark:opacity-0"
+                className="absolute left-8 top-1 motion-safe:animate-bounce dark:left-1 dark:opacity-0"
               />
               <Image
                 src={"/cloud.svg"}
@@ -59,7 +59,7 @@ export default function ThemeProvider({
                 alt="Cloud"
                 width={10}
                 height={10}
-                className="absolute left-12 top-6 motion-safe:animate-bounce dark:left-0 dark:opacity-0"
+                className="absolute left-12 top-5 motion-safe:animate-bounce dark:left-0 dark:opacity-0"
               />
               <Image
                 src={"/moon.svg"}

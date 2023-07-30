@@ -5,18 +5,37 @@ import ThemeProvider from "./components/ThemeProvider";
 import LocaleSwitcher from "./components/locale-switcher";
 import "./globals.css";
 
+import { Cabin, Noto_Sans_SC, Roboto } from "next/font/google";
 export const metadata: Metadata = {
   title: "Dante's App",
   description: "I'm just trying my best u know",
 };
+
+const en = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+});
+const vi = Cabin({
+  weight: "400",
+  subsets: ["vietnamese"],
+});
+const zh = Noto_Sans_SC({
+  weight: "400",
+  subsets: ["latin"],
+});
+const fontLanguages = {
+  en: en,
+  vi: vi,
+  zh: zh,
+} as const;
 
 export default function RootLayout({
   children,
   params,
 }: PropsWithLocale<PropsWithChildren<{}>>) {
   return (
-    <html lang={params.lang}>
-      <body className="transition-all duration-1000 dark:bg-slate-950 dark:text-white">
+    <html lang={params.lang} className={fontLanguages[params.lang].className}>
+      <body className="bg-background text-text transition-all duration-1000">
         <ThemeProvider topItems={<LocaleSwitcher />}>{children}</ThemeProvider>
       </body>
     </html>

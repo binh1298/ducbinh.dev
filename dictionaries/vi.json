@@ -4,6 +4,9 @@
     "description": "Viết web để được lên trình. Viết blog để được dân tình bấm like"
   },
   "lnktr": {
-    "name": "Phạm Đức Bình"
+    "name": "Phạm Đức Bình",
+    "job": "Kỹ sư phần mềm",
+    "secondJob": "Đánh đàn dạo",
+    "buyTab": "Mua tab"
   }
 }

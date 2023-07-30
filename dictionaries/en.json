@@ -5,6 +5,8 @@
   },
   "lnktr": {
     "name": "Dante Pham",
-    "job": "Software Engineer"
+    "job": "Software Engineer",
+    "secondJob": "Content Creator",
+    "buyTab": "Buy tabs"
   }
 }

@@ -1,13 +1,23 @@
+import {
+  Blue,
+  Emerald,
+  Orange,
+  Red,
+  Sky,
+  Slate,
+  Stone,
+} from "./palette-tailwind";
+
 const light = {
-  "color-scheme": "light",
-  primary: "#d1c1d7",
-  secondary: "#f6cbd1",
-  accent: "#b4e9d6",
-  neutral: "#70acc7",
-  "base-100": "#ffffff",
-  "base-200": "#f9fafb",
-  "base-300": "#d1d5db",
-  "--rounded-btn": "1.9rem",
+  scheme: "light",
+  primary: Blue["400"],
+  "primary-hover": Blue["600"],
+  text: Stone["900"],
+  background: Slate["100"],
+  info: Sky["500"],
+  success: Emerald["500"],
+  warning: Orange["500"],
+  error: Red["500"],
 } as const;
 
 export default light;

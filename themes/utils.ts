@@ -1,11 +1,6 @@
 import dark from "./dark";
 import light from "./light";
 
-interface IThemes {
-  dark: typeof dark;
-  light: typeof light;
-}
-
 const mapTheme = (variables: typeof dark | typeof light) => {
   const result: Record<string, any> = {};
   Object.keys(variables).forEach((key) => {
@@ -16,19 +11,37 @@ const mapTheme = (variables: typeof dark | typeof light) => {
   return result;
 };
 
-const themes: IThemes = {
+const themes = {
   dark,
   light,
+} as const;
+
+export const initTheme = (): void => {
+  const root = document.documentElement;
+  const theme = root.classList.contains("dark") ? "dark" : "light";
+  const themeObject = mapTheme(themes[theme]);
+
+  Object.keys(themeObject).forEach((property) => {
+    if (property === "name") {
+      return;
+    }
+
+    root.style.setProperty(property, themeObject[property]);
+  });
 };
-export const applyTheme = (
-  theme: keyof IThemes,
-  prevTheme: keyof IThemes,
-): void => {
+export const switchTheme = (): void => {
+  const root = document.documentElement;
+  let theme: keyof typeof themes = "dark";
+  let prevTheme: keyof typeof themes = "light";
+
+  console.log(theme, prevTheme);
+  if (root.classList.contains("dark")) {
+    theme = "light";
+    prevTheme = "dark";
+  }
+
   const themeObject = mapTheme(themes[theme]);
   const prevThemeObject = mapTheme(themes[prevTheme]);
-  if (!themeObject) return;
-
-  const root = document.documentElement;
 
   Object.keys(prevThemeObject).forEach((property) => {
     if (property === "name") {

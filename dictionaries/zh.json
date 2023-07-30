@@ -4,6 +4,9 @@
     "description": "范某不才"
   },
   "lnktr": {
-    "name": "范德平"
+    "name": "范德平",
+    "job": "Software Engineer",
+    "secondJob": "Content Creator",
+    "buyTab": "Buy Tab"
   }
 }

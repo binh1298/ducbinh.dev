@@ -8,7 +8,6 @@ export default async function IndexPage({
 
   return (
     <div>
-      <p>Current locale: {lang}</p>
       <p>
         This text is rendered on the server: {dictionary["app"].description}
       </p>

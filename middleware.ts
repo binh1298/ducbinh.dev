@@ -29,12 +29,24 @@ export function middleware(request: NextRequest) {
   // // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
   if (
     [
-      "/avatar.png",
+      "/avatar-dark.png",
+      "/avatar-light.png",
+      "/avatar-light-removebg.png",
       "/sun.svg",
       "/cloud.svg",
       "/moon.svg",
       "/star.svg",
-      // other files in `public`
+      "/facebook.svg",
+      "/facebook-white.svg",
+      "/github.svg",
+      "/linkedin.svg",
+      "/location.svg",
+      "/mail.svg",
+      "/react.svg",
+      "/soundcloud.svg",
+      "/tiktok.svg",
+      "/youtube.svg",
+      "/github_contribution.png",
     ].includes(pathname)
   )
     return;

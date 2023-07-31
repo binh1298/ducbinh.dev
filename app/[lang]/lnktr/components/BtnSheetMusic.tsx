@@ -9,7 +9,6 @@ export default function BtnSheetMusic({ children }: PropsWithChildren<{}>) {
     <Button
       variant="contained"
       color="primary"
-      className="mr-5"
       Icon={SheetMusic}
       onClick={() => console.log("HAHAH")}
     >

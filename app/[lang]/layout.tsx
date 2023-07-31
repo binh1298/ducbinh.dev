@@ -5,6 +5,7 @@ import ThemeProvider from "./components/ThemeProvider";
 import LocaleSwitcher from "./components/locale-switcher";
 import "./globals.css";
 
+import { defaultTheme } from "@/themes/utils";
 import { Cabin, Noto_Sans_SC, Roboto } from "next/font/google";
 export const metadata: Metadata = {
   title: "Dante's App",
@@ -36,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang={params.lang}
-      className={`transition-all duration-1000 ${
+      className={`${defaultTheme} transition-all duration-1000 ${
         fontLanguages[params.lang].className
       }`}
     >

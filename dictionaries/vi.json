@@ -6,7 +6,9 @@
   "lnktr": {
     "name": "Phạm Đức Bình",
     "job": "Kỹ sư phần mềm",
-    "secondJob": "Đánh đàn dạo",
+    "title": "Building right things the right way with workflows and Typescript",
+    "darkJob": "Nhà sáng tạo nội dung",
+    "darkTitle": "Create content that helps people learn and grow",
     "buyTab": "Mua tab"
   }
 }

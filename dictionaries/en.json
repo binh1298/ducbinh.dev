@@ -6,7 +6,9 @@
   "lnktr": {
     "name": "Dante Pham",
     "job": "Software Engineer",
-    "secondJob": "Content Creator",
+    "title": "Building right things the right way with workflows and Typescript",
+    "darkJob": "Content Creator",
+    "darkTitle": "Create content that helps people learn and grow",
     "buyTab": "Buy tabs"
   }
 }

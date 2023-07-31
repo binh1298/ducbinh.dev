@@ -10,7 +10,7 @@ export default async function LinkTree({
   const t = await getDictionary(lang);
 
   return (
-    <main className="relative flex h-screen flex-col items-center bg-[url('/github_contribution.png')] bg-contain bg-no-repeat dark:bg-gradient-to-t dark:from-pink-900 dark:to-background">
+    <main className="relative flex h-screen flex-col items-center dark:bg-gradient-to-t dark:from-pink-900 dark:to-background">
       <Image
         src="/avatar-dark.png"
         alt="Avatar"
@@ -18,13 +18,15 @@ export default async function LinkTree({
         height={200}
         className="opacity-0 transition-all duration-1000 dark:rounded-full dark:opacity-100"
       />
-      <Image
-        src="/avatar-light-removebg.png"
-        alt="Avatar"
-        width={200}
-        height={200}
-        className="absolute top-0 rounded opacity-100 transition-all duration-1000 dark:rounded-full dark:opacity-0"
-      />
+      <div className="absolute top-0 flex w-full max-w-2xl justify-center bg-[url('/github_contribution.png')] bg-contain bg-no-repeat opacity-100 transition-all duration-1000 dark:opacity-0 ">
+        <Image
+          src="/avatar-light-removebg.png"
+          alt="Avatar"
+          width={200}
+          height={200}
+          className="rounded transition-all duration-1000 dark:rounded-full"
+        />
+      </div>
       <div className={"text-center opacity-100 dark:hidden dark:opacity-0"}>
         <h4 className="text-2xl font-bold">{t.lnktr.name}</h4>
         <p className="text-center text-sm">{t.lnktr.job}</p>
